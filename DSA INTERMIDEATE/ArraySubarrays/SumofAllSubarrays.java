@@ -42,13 +42,19 @@ Their sums are: 1 + 2 + 3 + 3 + 5 + 6 = 20
 Explanation 2:
 
 Similiar to the first example, the sum of all subarray sums for this array is 19.*/
-
-public class Solution {
-    public long subarraySum(int[] A) {
+public class SumofAllSubarrays {
+    public static void main(String[] args) {
+        int [] A = {1, 2, 3};   
+        //subarraySum(A);
+        long output = subarraySum(A);
+        System.out.println(output);
+    }
+    public static long subarraySum(int[] A) {
         long ans = 0 ; 
         for(int i = 0 ; i < A.length ; i ++){
            ans +=  (long)A[i] *(A.length - i )*(i + 1);
         }
-        return ans ;
-    }
+        return ans;
+    } 
 }
+
