@@ -47,8 +47,8 @@ Explanation 2:
 All elements are greater than B, which means we cannot select any subarray.
 Hence, the answer is 0.*/
 
-public class Solution {
-    public int maxSubarray(int A, int B, int[] C) {
+public class Maximum_Subarray_Easy {
+    public static int maxSubarray(int A, int B, int[] C) {
         int ans = 0;
 /*ans = 0
 for(start = 0, start < size; start += 1)
@@ -68,9 +68,13 @@ for(start = 0, start < size; start += 1)
                 }
         }
         
-        return ans;
-
-        
-        
+        return ans;  
+    }
+    public static void main(String[] args) {
+        int [] C = {2, 1, 3, 4, 5};
+        int A = 5;
+        int B = 12 ;
+        int output = maxSubarray(A, B, C);
+        System.out.println(output);
     }
 }
